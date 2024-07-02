@@ -1,47 +1,86 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/POWrYz7V)
-# AyED / AYP2 - TPG 1c2024
+<h1>
+  Path Finding and Data Structures
+</h1>
 
-<p align="center">
-   <img src="Banner.jpg" alt="TPG: El bullicio del Callejon Aurum"><br>
-</p>
+This repository contains the implementation of the lowest-cost path search connecting the coordinates of two branches for order delivery using the A* algorithm. These branches will be stored in a binary search tree (BST), and their orders will be stored in a max heap to efficiently find the highest priority orders. Additionally, we decided to implement a minimum spanning tree (MST) that will connect the branches, with the weight of its edges representing the number of orders delivered between them.
+<br>  <br/>
+<div align="center">
+    <img src="https://i.sstatic.net/1shiF.png" title="Graphical demonstration of the shortest path using A*"
+       style="width: 35vw; height: auto;" />
+</div>
+<br>  <br/>
+<div align="center">
+    <img src="https://userscontent2.emaze.com/images/09933cdc-12a0-48e2-b3fb-1b2fe076a43e/e468e33d-8957-4713-917f-a0f459d81b8a.png" title="Graphical demonstration of a minimun spanning tree (MST)."
+       style="width: 35vw; height: auto;" />
+</div>
+<br>  <br/>
 
-## Nombre del grupo: **NOMBRE**
+ <h2> Contents: </h2>
 
-### Integrantes:
+- Description
+- Documents
+- Requirements
+- Installation
+- Contributors
+- Usage
+- Code Structure
+- License
 
-#### TELMO, LAUTARO - 111644
+<h2> Description: </h2>
 
-#### ALOISI, LEANDRO - 111638 
+This project includes the implementation of fundamental data structures:
 
-#### KOZIUPA, MATÍAS - 107672
+1. **A"*" Path finding**: Use of the A* algorithm for finding the shortest path on a predefined and scalable map.
+2. **Binary Search Tree**: Implementation of a binary search tree that sorts the branches alphabetically to facilitate their search.
+3. **Max Heap**: Use of a max heap for storing orders, primarily used to facilitate the search for the highest priority order.
+4. **Minimun Spanning Tree**: Each graph represents a branch and its edges are the orders delivered between them, used in finding the most traveled path between the branches.
 
-#### FARDINI, SANTIAGO - 108692
+Each data structure is implemented as a class in C++, utilizing OOP principles to encapsulate data and behavior.
 
-#### CONDORI, HÉCTOR - 104518
+<h2> Documents </h2>
 
-### Documentos:
+1. [ALGORITHMIC COMPLEXITY REPORT](https://docs.google.com/document/d/1hwWNvfIS35NLt1AiILlnDoYkv0icz2lv1zsoENiJqP8/edit?usp=sharing)
+2. [PROGRAM DEMONSTRATION VIDEO](https://youtu.be/yYmCdmJCWj8?si=6FLtTx7sO4nx-9l8)
 
-1. [Informe de complejidad algorítmica](https://www.enlaceaca.com/)
 
-### Compilación
+<h2> Requeriments: </h2>
 
-El proyecto se puede compilar manualmente por terminal con la siguiente línea:
+- C++11 or higher
+- A C++ compiler (e.g., g++, clang++)
 
-> // COMPLETAR CON LINEA DE COMPILACIÓN //
+<h2> Installation: </h2> 
 
-O, alternativamente, con CMake, utilizando el archivo **CMakeLists.txt** presente en el directorio raíz.
+1. Clone this repository to your local machine:
+    ```bash
+    git clone https://github.com/your-username/your-repo.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo
+    ```
+3. Compile the source files:
+    ```bash
+    g++ -I ./include -I ./include/a_estrella -I include/objetos_mapa -I include/aem -I include/minijuego -o test main.cpp src/.cpp src/a_estrella/.cpp src/objetos_mapa/* src/aem/* src/minijuego/*
+    ./test
+    ```
+<h2> Contributors:</h2>
 
-Para distribuciones de Linux, se pueden utilizar los scripts presentes en el directorio raíz para compilar y ejecutar
-la suite de tests. Requiere:
+- Telmo Lautaro
+- Aloisi Leandro
+- Koziupa Matias
+- Condori Hector 
+- Santiago Fardini
 
-1. [g++](https://gcc.gnu.org/)
-2. [CMake](https://cmake.org/)
-3. [Valgrind](https://valgrind.org/)
+ <h2> Usage: </h2>
 
-Que se pueden instalar por terminal:
+Here is an example of how you can use the classes implemented in this project:
 
-> sudo apt-get install // PROGRAMA //
+```cpp
+#include "interfaz_de_usuario.hpp"
 
-# Aclaraciones adicionales:
+int main() {
+    interfaz_de_usuario menu;
+    menu.iniciar();
+}
+```
 
-// ACLARACIONES ADICIONALES PARA EL CORRECTOR, COMO DECISIONES O SUPUESTOS QUE CONSIDERARON //
